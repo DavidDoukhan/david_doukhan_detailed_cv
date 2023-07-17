@@ -20,6 +20,9 @@ Optionally, while forking this repo, you can get a direct link to the generated 
 
 Now, once your site is published, your CV will be accessible at: https://username.github.io/autoCV/cv.pdf
 
+https://daviddoukhan.github.io/david_doukhan_detailled_cv/cv.pdf
+
+
 ## This template on Overleaf
 
 <a href="https://www.overleaf.com/latex/templates/autocv/scfvqfpxncwb"><img alt="Overleaf" src="https://img.shields.io/badge/Overleaf-47A141.svg?style=for-the-badge&logo=Overleaf&logoColor=white"/></a>
