@@ -100,6 +100,15 @@
 %debug page outer frames
 %\usepackage{showframe}
 
+
+
+%%% MYFILTER
+
+\defbibcheck{nokeyword}{%
+\iffieldundef{keywords}{}{\skipentry}}
+
+
+
 %----------------------------------------------------------------------------------------
 %	BEGIN DOCUMENT
 %----------------------------------------------------------------------------------------
@@ -184,8 +193,8 @@ This CV is automatically generated and deployed using the \href{https://github.c
 \begin{refsection}[citations.bib]
 \nocite{*}
 \printbibliography[type=article, heading=subbibliography, title={Peer-reviewed journal papers}]
-\printbibliography[type=inproceedings, heading=subbibliography, title={Peer-reviewed conference proceedings}]
-\printbibliography[type=conference, heading=subbibliography, title={Scientific communication (without acts)}]
+\printbibliography[type=inproceedings, check=nokeyword, heading=subbibliography, title={Peer-reviewed conference proceedings}]
+\printbibliography[type=inproceedings, keyword={conf}, heading=subbibliography, title={Scientific communication (without acts)}]
 \end{refsection}
 
 %----------------------------------------------------------------------------------------
