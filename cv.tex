@@ -84,7 +84,8 @@
 
 %for publications
 %\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
-\usepackage[style=authoryear,sorting=ydnt,maxbibnames=100]{biblatex}
+%\usepackage[style=authoryear,sorting=ydnt,maxbibnames=100]{biblatex}
+\usepackage[style=numeric,sorting=ydnt,maxbibnames=100,defernumbers=true]{biblatex}
 
 
 %Setup hyperref package, and colours for links
@@ -194,6 +195,7 @@ This CV is automatically generated and deployed using the \href{https://github.c
 \nocite{*}
 \printbibliography[type=article, heading=subbibliography, title={Peer-reviewed journal papers}]
 \printbibliography[type=inproceedings, check=nokeyword, heading=subbibliography, title={Peer-reviewed conference proceedings}]
+\printbibliography[type=inproceedings, keyword={abstract}, heading=subbibliography, title={Peer-reviewed abstract paper}]
 \printbibliography[type=inproceedings, keyword={conf}, heading=subbibliography, title={Scientific communication (without acts)}]
 \end{refsection}
 
