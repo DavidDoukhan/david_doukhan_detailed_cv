@@ -27,6 +27,7 @@
 
 % article class because we want to fully customize the page and not use a cv template
 \documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
 
 %----------------------------------------------------------------------------------------
 %	FONT
@@ -83,7 +84,7 @@
 
 %for publications
 %\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
-\usepackage[style=authoryear,sorting=ynt,maxbibnames=100]{biblatex}
+\usepackage[style=authoryear,sorting=ydnt,maxbibnames=100]{biblatex}
 
 
 %Setup hyperref package, and colours for links
@@ -119,10 +120,10 @@
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
 \Huge{David Doukhan} \\[7.5pt]
-\href{https://github.com/username}{\raisebox{-0.05\height}\faGithub\ username} \ $|$ \ 
-\href{https://linkedin.com/in/username}{\raisebox{-0.05\height}\faLinkedin\ username} \ $|$ \ 
+\href{https://github.com/DavidDoukhan}{\raisebox{-0.05\height}\faGithub\ DavidDoukhan} \ $|$ \ 
+\href{https://linkedin.com/in/david-doukhan-588074107}{\raisebox{-0.05\height}\faLinkedin\ david-doukhan-588074107} \ $|$ \ 
 \href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
-\href{mailto:email@mysite.com}{\raisebox{-0.05\height}\faEnvelope \ email@mysite.com} \ $|$ \ 
+\href{mailto:david.doukhan@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ david.doukhan@gmail.com} \ $|$ \ 
 \href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +00.00.000.000} \\
 \end{tabularx}
 
@@ -184,6 +185,7 @@ This CV is automatically generated and deployed using the \href{https://github.c
 \nocite{*}
 \printbibliography[type=article, heading=subbibliography, title={Peer-reviewed journal papers}]
 \printbibliography[type=inproceedings, heading=subbibliography, title={Peer-reviewed conference proceedings}]
+\printbibliography[type=conference, heading=subbibliography, title={Scientific communication (without acts)}]
 \end{refsection}
 
 %----------------------------------------------------------------------------------------
