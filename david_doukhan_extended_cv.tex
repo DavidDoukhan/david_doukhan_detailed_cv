@@ -92,7 +92,8 @@
 \usepackage[unicode, draft=false]{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
-\addbibresource{citations.bib}
+\addbibresource{david_doukhan_ina.bib}
+\addbibresource{david_doukhan_older.bib}
 \setlength\bibitemsep{1em}
 
 %for social icons
@@ -193,12 +194,13 @@ This CV is automatically generated and deployed using the \href{https://github.c
 %	PUBLICATIONS
 %----------------------------------------------------------------------------------------
 \section{Publications}
-\begin{refsection}[citations.bib]
+\begin{refsection}[david_doukhan_ina.bib,david_doukhan_older.bib]
 \nocite{*}
 \printbibliography[type=article, heading=subbibliography, title={Peer-reviewed journal papers}, resetnumbers=true]
 \printbibliography[type=inproceedings, check=nokeyword, heading=subbibliography, title={Peer-reviewed conference proceedings}, resetnumbers=true]
 \printbibliography[type=inproceedings, keyword={abstract}, heading=subbibliography, title={Peer-reviewed abstract paper}, resetnumbers=true]
 \printbibliography[type=inproceedings, keyword={conf}, heading=subbibliography, title={Scientific communication (without acts)}, resetnumbers=true]
+\printbibliography[type=thesis, heading=subbibliography, title={PhD Thesis}, resetnumbers=true]
 \end{refsection}
 
 %----------------------------------------------------------------------------------------
