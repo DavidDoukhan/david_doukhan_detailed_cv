@@ -82,10 +82,33 @@
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{10pt}{10pt}
 
+%\titleformat{\subsection}{}{}{}{}[\titlerule]
+%\titlespacing{\subsection}{0pt}{10pt}{10pt}
+
+
 %for publications
 %\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
 %\usepackage[style=authoryear,sorting=ydnt,maxbibnames=100]{biblatex}
-\usepackage[style=numeric,sorting=ydnt,maxbibnames=100,defernumbers=true]{biblatex}
+\usepackage[backend=biber,style=numeric, sorting=ydnt,maxbibnames=100,defernumbers=true]{biblatex}
+
+
+
+
+
+
+
+\defbibheading{subbibliography}[\refname]{\subsection{#1}}
+\setcounter{secnumdepth}{0}
+
+
+
+%% \usepackage[
+%%   style=publist,
+%%   maxnames=11,
+%%   plnumbering=local,
+%%   marginyear=true,
+%% ]{biblatex}
+
 
 
 %Setup hyperref package, and colours for links
@@ -110,6 +133,8 @@
 \iffieldundef{keywords}{}{\skipentry}}
 
 
+\usepackage{tikz} 
+
 
 %----------------------------------------------------------------------------------------
 %	BEGIN DOCUMENT
@@ -117,7 +142,9 @@
 \begin{document}
 
 % non-numbered pages
-\pagestyle{empty} 
+%\pagestyle{empty} 
+
+
 
 %----------------------------------------------------------------------------------------
 %	TITLE
@@ -130,90 +157,108 @@
 % \end{tabularx}
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{David Doukhan} \\[7.5pt]
+\Huge{David Doukhan, Ph.D.} \\[7.5pt]
 \href{https://github.com/DavidDoukhan}{\raisebox{-0.05\height}\faGithub\ DavidDoukhan} \ $|$ \ 
 \href{https://linkedin.com/in/david-doukhan-588074107}{\raisebox{-0.05\height}\faLinkedin\ david-doukhan-588074107} \ $|$ \ 
 %\href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \
 
 \href{https://twitter.com/doukhan_david}{\raisebox{-0.05\height}\faTwitter \ doukhan\_david} \ $|$ \ 
 \href{mailto:david.doukhan@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ david.doukhan@gmail.com} \ $|$ \ 
-\href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +00.00.000.000} \\
+\href{tel:+33678789781}{\raisebox{-0.05\height}\faMobile \ +33.6.78.78.97.81} \\
 \end{tabularx}
+
+\begin{tikzpicture}[remember picture, overlay]
+  \node [anchor=north east, inner ysep=15pt, inner xsep=30pt]  at (current page.north east)
+     {\includegraphics[height=3.2cm]{david_doukhan.jpg}};
+\end{tikzpicture}
+
+%\hfill
+%\smash{\includegraphics[width=2.5cm]{david_doukhan.jpg}}
 
 %----------------------------------------------------------------------------------------
 % EXPERIENCE SECTIONS
 %----------------------------------------------------------------------------------------
 
 %Interests/ Keywords/ Summary
-\section{Summary}
-This CV is automatically generated and deployed using the \href{https://github.com/jitinnair1/autoCV}{autoCV} template along with GitHub Actions such that a new version of the CV is compiled, published and ready for use when the cv.tex file is updated. For details, \href{https://github.com/jitinnair1/autoCV}{click here}.
+\section*{Summary}
+
+I'm researcher at \href{https://www.ina.fr}{Institut National de l'Audiovisuel (INA)} in Paris metropolitan area (France).
+This document presents my publication and research dissemination list (last update: \today).
+More information to come!
+%My research interest range from audio analysis and synthesis (audio segmentation, speaker diarization and recognition, paralinguistics, prosodic analysis 3D audio, speech synthesis), 
+
+
+\tableofcontents
 
 %Experience
-\section{Work Experience}
+%% \section{Work Experience}
 
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Designation} & \hfill Jan 2021 - present \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
-\end{tabularx}
+%% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+%% \textbf{Designation} & \hfill Jan 2021 - present \\[3.75pt]
+%% \multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
+%% \end{tabularx}
 
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Designation} & \hfill Mar 2019 - Jan 2021 \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{
-\begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item[--] long long line of blah blah that will wrap when the table fills the column width
-        \item[--] again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
-    \end{itemize}
-    \end{minipage}
-}
-\end{tabularx}
+%% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+%% \textbf{Designation} & \hfill Mar 2019 - Jan 2021 \\[3.75pt]
+%% \multicolumn{2}{@{}X@{}}{
+%% \begin{minipage}[t]{\linewidth}
+%%     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+%%         \item[--] long long line of blah blah that will wrap when the table fills the column width
+%%         \item[--] again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
+%%     \end{itemize}
+%%     \end{minipage}
+%% }
+%% \end{tabularx}
 
-%Projects
-\section{Projects}
+%% %Projects
+%% \section{Projects}
 
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Some Project} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
-\end{tabularx}
+%% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+%% \textbf{Some Project} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
+%% \multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
+%% \end{tabularx}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-\section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}	
-2030 - present & PhD (Subject) at \textbf{University} \hfill \normalsize (GPA: 4.0/4.0) \\
+%% %----------------------------------------------------------------------------------------
+%% %	EDUCATION
+%% %----------------------------------------------------------------------------------------
+%% \section{Education}
+%% \begin{tabularx}{\linewidth}{@{}l X@{}}	
+%% 2030 - present & PhD (Subject) at \textbf{University} \hfill \normalsize (GPA: 4.0/4.0) \\
 
-2023 - 2027 & Bachelor's Degree at \textbf{College} \hfill (GPA: 4.0/4.0) \\ 
+%% 2023 - 2027 & Bachelor's Degree at \textbf{College} \hfill (GPA: 4.0/4.0) \\ 
 
-2022 & Class 12th Some Board \hfill  (Grades) \\
+%% 2022 & Class 12th Some Board \hfill  (Grades) \\
 
-2021 & Class 10th Some Board \hfill  (Grades) \\
-\end{tabularx}
+%% 2021 & Class 10th Some Board \hfill  (Grades) \\
+%% \end{tabularx}
 
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS
 %----------------------------------------------------------------------------------------
-\section{Publications}
+\section{Publications and Research Dissemination}
 \begin{refsection}[david_doukhan_ina.bib,david_doukhan_older.bib]
 \nocite{*}
-\printbibliography[type=article, heading=subbibliography, title={Peer-reviewed journal papers}, resetnumbers=true]
+\printbibliography[type=article, check=nokeyword, heading=subbibliography, title={Peer-reviewed journal papers}, resetnumbers=true]
 \printbibliography[type=inproceedings, check=nokeyword, heading=subbibliography, title={Peer-reviewed conference proceedings}, resetnumbers=true]
 \printbibliography[type=inproceedings, keyword={abstract}, heading=subbibliography, title={Peer-reviewed abstract papers}, resetnumbers=true]
 \printbibliography[type=thesis, heading=subbibliography, title={PhD Thesis}, resetnumbers=true]
 \printbibliography[type=report, heading=subbibliography, title={Governmental and non-governmental reports on women and diversity representation in media (contributions)}, resetnumbers=true]
-\printbibliography[type=inproceedings, keyword={conf}, heading=subbibliography, title={Oral Scientific communications (Invited Speaker)}, resetnumbers=true]
+\printbibliography[type=article, heading=subbibliography, keyword={general}, title={General audience and science popularization articles}, resetnumbers=true]
+\printbibliography[type=inproceedings, keyword={invit}, heading=subbibliography, title={Oral Scientific communications (Invited Speaker)}, resetnumbers=true]
 \end{refsection}
 
 %----------------------------------------------------------------------------------------
 %	SKILLS
 %----------------------------------------------------------------------------------------
-\section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
-Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\  
-\end{tabularx}
 
-\vfill
-\center{\footnotesize Last updated: \today}
+
+%% \section{Skills}
+%% \begin{tabularx}{\linewidth}{@{}l X@{}}
+%% Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
+%% Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\  
+%% \end{tabularx}
+
+%% \vfill
+
 
 \end{document}
