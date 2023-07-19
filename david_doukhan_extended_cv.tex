@@ -121,6 +121,8 @@
 
 % replace full url with hyperlink and symbol
 \DeclareFieldFormat{url}{\mkbibacro{URL}\addcolon\space\href{#1}{\faExternalLink*}}
+\newcommand{\myurl}[1]{URL:~\href{#1}{\faExternalLink*}}
+
 
 \addbibresource{david_doukhan_ina.bib}
 \addbibresource{david_doukhan_older.bib}
@@ -240,6 +242,29 @@ More information to come!
 
 
 
+\section{Editorial, Animation and Evaluation activities}
+\subsection{Scientific Animation}
+\begin{enumerate}
+\item Music Information Retrieval Evaluation eXchange (MIREX - 2018). Task Captain in change of voice and music activity detection challenge in collaboration with Blai Meléndez-Catalán (BMAT/UPF) \myurl{https://www.music-ir.org/mirex/wiki/2018:Music_and/or_Speech_Detection}.
+\item Journées d’étude et de Formation sur la Parole (JEFP - 2012). Member of the organization committee
+\end{enumerate}
+\subsection{Journal and conference reviewing committee}
+\begin{enumerate}
+\item revue TAL \myurl{https://www.atala.org/node/16}
+\item The Journal of the Acoustical Society of America (JASA)
+\item EURASIP Journal on Audio, Speech, and Music Processing
+\item Frontiers in Computer Science
+\item Annual Conference of the International Speech Communication Association (INTERSPEECH - ISCA)
+\item International Conference on Acoustics, Speech, and Signal Processing (IEEE ICASSP)
+\item International Conference on Language Resources and Evaluation (LREC)
+\item Phonetics and Phonology in Europe (Pape)
+\item Journées d’Etudes de la Parole (JEP - AFCP)
+\end{enumerate}
+\subsection{Funded Project Evaluation}
+\begin{enumerate}
+\item Member of International Federation of Television Archives (IFTA) Media Studies Grant Commission (2020-2021)
+\item Member of French National Research Agency (ANR) CE38 evaluation committee (2018)
+\end{enumerate}
 
 
 
@@ -259,7 +284,8 @@ More information to come!
 \printbibliography[type=thesis, heading=subbibliography, title={PhD Thesis}, resetnumbers=true]
 \printbibliography[type=report, heading=subbibliography, title={Governmental and non-governmental reports on women and diversity representation in media (contributions)}, resetnumbers=true]
 \printbibliography[type=article, heading=subbibliography, keyword={general}, title={General audience and science popularization articles}, resetnumbers=true]
-\printbibliography[type=inproceedings, keyword={invit}, heading=subbibliography, title={Oral Scientific communications (Invited Speaker)}, resetnumbers=true]
+\printbibliography[type=inproceedings, keyword={invit}, heading=subbibliography, title={Invited Speaker}, resetnumbers=true]
+\printbibliography[type=inproceedings, keyword={publicaudition}, heading=subbibliography, title={Public auditions and scientific expertise}, resetnumbers=true]
 \end{refsection}
 
 %----------------------------------------------------------------------------------------
