@@ -27,7 +27,8 @@
 
 % article class because we want to fully customize the page and not use a cv template
 
-\listfiles
+%%%% DEBUG COMMAND
+%%%%\listfiles
 
 \documentclass[a4paper,12pt]{article}
 \usepackage[utf8]{inputenc}
@@ -92,7 +93,14 @@
 %for publications
 %\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
 %\usepackage[style=authoryear,sorting=ydnt,maxbibnames=100]{biblatex}
-\usepackage[backend=biber,style=numeric, sorting=ydnt,maxbibnames=100,defernumbers=true]{biblatex}
+
+\usepackage[%backend=biber,
+        style=numeric,
+        sorting=ydnt,
+        maxbibnames=100,
+        defernumbers=true,
+%        dateabbrev=false, % abbrev month display
+        alldates=long]{biblatex}
 
 
 
@@ -285,7 +293,7 @@ More information to come!
 \printbibliography[type=thesis, heading=subbibliography, title={PhD Thesis}, resetnumbers=true]
 \printbibliography[type=report, heading=subbibliography, title={Governmental and non-governmental reports on women and diversity representation in media (contributions)}, resetnumbers=true]
 \printbibliography[type=article, heading=subbibliography, keyword={general}, title={General audience and science popularization articles}, resetnumbers=true]
-\printbibliography[type=inproceedings, keyword={invit}, heading=subbibliography, title={Invited Speaker}, resetnumbers=true]
+\printbibliography[type=unpublished, keyword={invit}, heading=subbibliography, title={Invited Speaker}, resetnumbers=true]
 \printbibliography[type=inproceedings, keyword={publicaudition}, heading=subbibliography, title={Public auditions and scientific expertise}, resetnumbers=true]
 \printbibliography[keyword={itw}, heading=subbibliography, title={Interventions and interviews in general audience media (press, audiovisual, pure players)}, resetnumbers=true]
 \end{refsection}
