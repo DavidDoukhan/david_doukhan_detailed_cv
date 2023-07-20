@@ -96,11 +96,49 @@
 
 \usepackage[%backend=biber,
         style=numeric,
-        sorting=ydnt,
+        %        sorting=ydnt,
+        sorting=ymdDnt,
         maxbibnames=100,
         defernumbers=true,
 %        dateabbrev=false, % abbrev month display
         alldates=long]{biblatex}
+
+% SORT BY YEAR, MONTH, DAY (decreasing)
+\DeclareSortingTemplate{ymdDnt}{
+  \sort{
+    \field{presort}
+  }
+  \sort[final]{
+    \field{sortkey}
+  }
+  \sort[direction=descending]{
+    \field{sortyear}
+    \field{year}
+    \literal{9999}
+  }
+  \sort[direction=descending]{
+    \field[padside=left,padwidth=2,padchar=0]{month}
+    \literal{99}
+  }
+  \sort[direction=descending]{
+    \field[padside=left,padwidth=2,padchar=0]{day}
+    \literal{99}
+  }
+  \sort{
+    \field{sortname}
+    \field{author}
+    \field{sorttitle}
+    \field{title}
+  }
+  \sort{
+    \field{sorttitle}
+  }
+  \sort[direction=descending]{
+    \field[padside=left,padwidth=4,padchar=0]{volume}
+    \literal{9999}
+  }
+}
+
 
 
 
