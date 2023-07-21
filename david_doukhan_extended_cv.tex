@@ -30,8 +30,6 @@
 %%%% DEBUG COMMAND
 %%%%\listfiles
 
-\documentclass[a4paper,12pt]{article}
-\usepackage[utf8]{inputenc}
 
 %----------------------------------------------------------------------------------------
 %	FONT
@@ -326,18 +324,24 @@ More information to come!
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS
 %----------------------------------------------------------------------------------------
-\section{Publications and Research Dissemination}
+
+\section{\PubSec}
+
 \begin{refsection}[david_doukhan_ina.bib,david_doukhan_older.bib,david_doukhan_itw.bib,david_doukhan_unpublished]
 \nocite{*}
-\printbibliography[type=article, check=nokeyword, heading=subbibliography, title={Peer-reviewed journal papers}, resetnumbers=true]
-\printbibliography[type=inproceedings, check=nokeyword, heading=subbibliography, title={Peer-reviewed conference proceedings}, resetnumbers=true]
-\printbibliography[type=inproceedings, keyword={abstract}, heading=subbibliography, title={Peer-reviewed abstract papers}, resetnumbers=true]
-\printbibliography[type=thesis, heading=subbibliography, title={PhD Thesis}, resetnumbers=true]
-\printbibliography[type=report, heading=subbibliography, title={Governmental and non-governmental reports (contributions)}, resetnumbers=true]
-\printbibliography[type=article, heading=subbibliography, keyword={general}, title={General audience and science popularization articles}, resetnumbers=true]
-\printbibliography[type=inproceedings, keyword={invit}, heading=subbibliography, title={Invited Speaker (non exhaustive list)}, resetnumbers=true]
-\printbibliography[type=inproceedings, keyword={publicaudition}, heading=subbibliography, title={Public auditions and scientific expertise}, resetnumbers=true]
-\printbibliography[keyword={itw}, heading=subbibliography, title={Interventions and interviews in general audience media (press, audiovisual, pure players)}, resetnumbers=true]
+\printbibliography[type=article, check=nokeyword, heading=subbibliography, title={\PubJournal}, resetnumbers=true]
+\printbibliography[type=inproceedings, check=nokeyword, heading=subbibliography, title={\PubConf}, resetnumbers=true]
+\printbibliography[type=inproceedings, keyword={abstract}, heading=subbibliography, title={\PubAbstract}, resetnumbers=true]
+\printbibliography[type=thesis, heading=subbibliography, title={\PubPhd}, resetnumbers=true]
+
+
+\section{\DiffSec}
+\printbibliography[type=report, heading=subbibliography, title={\DiffContribRep}, resetnumbers=true]
+\printbibliography[type=article, heading=subbibliography, keyword={general}, title={\DiffGeneral}, resetnumbers=true]
+\printbibliography[type=inproceedings, keyword={invit}, heading=subbibliography, title={\DiffInvit}, resetnumbers=true]
+\printbibliography[type=inproceedings, keyword={publicaudition}, heading=subbibliography, title={\DiffPublic}, resetnumbers=true]
+\printbibliography[keyword={itw}, heading=subbibliography, title={\DiffItw}, resetnumbers=true]
+
 \end{refsection}
 
 %----------------------------------------------------------------------------------------
