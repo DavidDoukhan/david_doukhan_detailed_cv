@@ -8,21 +8,27 @@ jobs:
     env:
       # Edit here with the names of your latex file and directory (can use ".")
       DIR: .
-      FILE: david_doukhan_extended_cv_en
+      FILEEN: david_doukhan_extended_cv_en
+      FILEFR: david_doukhan_extended_cv_fr      
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v3
-      - name: cv
+      - name: cven
         uses: dante-ev/latex-action@latest
         with:
-          root_file: ${{ env.FILE }}
+          root_file: ${{ env.FILEEN }}
+          working_directory: ${{ env.DIR }}
+      - name: cvfr
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: ${{ env.FILEFR }}
           working_directory: ${{ env.DIR }}
       - name: move
-        run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
-      - name: Upload pdf as artifact
+        run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILEEN }}.pdf ${{ env.DIR }}/${{ env.FILEFR }}.pdf ./github_artifacts/
+      - name: Upload pdfs as artifact
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ env.FILE }}.pdf
+          name: pdfs
           path: ./github_artifacts
   deploy:
     needs: [build]
