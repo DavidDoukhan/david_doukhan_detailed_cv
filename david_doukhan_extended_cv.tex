@@ -191,6 +191,31 @@
 \usepackage{tikz} 
 
 
+%%% JOB COMMANDS
+
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}    
+    }
+
+
 %----------------------------------------------------------------------------------------
 %	BEGIN DOCUMENT
 %----------------------------------------------------------------------------------------
@@ -257,25 +282,62 @@ Plus d'informations à venir!
 
 \tableofcontents
 
-%Experience
-%% \section{Work Experience}
+%% Experience
+\begin{en}
+\section{Work Experience}
 
-%% \begin{tabularx}{\linewidth}{ @{}l r@{} }
-%% \textbf{Designation} & \hfill Jan 2021 - present \\[3.75pt]
-%% \multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
-%% \end{tabularx}
 
-%% \begin{tabularx}{\linewidth}{ @{}l r@{} }
-%% \textbf{Designation} & \hfill Mar 2019 - Jan 2021 \\[3.75pt]
-%% \multicolumn{2}{@{}X@{}}{
-%% \begin{minipage}[t]{\linewidth}
-%%     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-%%         \item[--] long long line of blah blah that will wrap when the table fills the column width
-%%         \item[--] again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
-%%     \end{itemize}
-%%     \end{minipage}
-%% }
-%% \end{tabularx}
+
+\begin{joblong}{Speech analysis research engineer at INA}{2016 - present}
+\item Supervision of intern and Ph.D. students on various ML tasks : speech interruptions detection, active-learning, speaker recognition and diarization, audio segmentation, active speaker detection, audio jingle detection, face classification.
+\item Large-scale digital humanities studies based on the analysis of millions of hours of audiovisual data
+\item Technological transfer of research results to several governmental and NGO reports related to women representation in media (ARCOM, GMMP, Calvez)
+\item Implementation of audiovisual analysis softwares : sound and visual event detection, speech segmentation, voice activity detection, face tracking and classification, TV text incrustations detection, assisted annotation prototypes
+\end{joblong}
+
+
+\begin{joblong}{Large scale Music Information Retrieval at IRCAM}{2014-2015}
+\item Distributed RAM ML algorithms implementation in Matlab
+\item Refactorization of IRCAM’s classification framework to allow distributed processing
+\item Proposal of supervector based music genre and mood detection models
+\end{joblong}
+
+
+
+\begin{jobshort}{Speaker analysis at LIMSI-CNRS}{2013-2014}
+Implementation of speaker diarization and Voice Activity Detection algorithms suited to noisy archives (ethnographic recordings) in Python.
+\end{jobshort}
+
+
+
+\begin{joblong}{Text-To-Speech at LIMSI-CNRS : Ph.D. Research}{2009-2013}
+\item Production of annotated speech ressources, prosodic analyzes and prosodic visualization tools
+\item Natural language processing (CRF, POS) and inter-annotator agreement analysis
+\item Expressive speech synthesis and perceptual evaluation
+\end{joblong}
+
+
+
+\begin{jobshort}{Real-time signal processing internship at Voxler}{2009 (6 months)}
+Real-time pitch and prosodic similarity estimation applied to video-games (Matlab, C++)
+\end{jobshort}
+
+\begin{jobshort}{Virtual reality engineer at IRCAM}{2008 (6 months)}
+Virtual environments to treat dog phobia: computer graphics programming, 3D binaural sound rendering \& head-tracking management in C++
+\end{jobshort}
+
+\begin{jobshort}{Computer Vision research assistant at MIT (USA)}{2008 (6 months)}
+Face and object recognition (Python)
+\end{jobshort}
+
+\begin{jobshort}{High-throughput deep learning internship at MIT(USA)}{2007 (6 months)}
+Implementation of a CNN Python framework suited to Cell Be parallel architectures : C, assembly, SIMD, code generation, just-in-time compilation.
+\end{jobshort}
+
+
+\end{en}
+
+
 
 %% %Projects
 %% \section{Projects}
@@ -316,14 +378,14 @@ Plus d'informations à venir!
 
 \section{\EvalSec}
 \subsection{\EvalJournal}
-\begin{enumerate}
+\begin{enumerate}[nosep, after=\strut, leftmargin=1em, itemsep=3pt]
 \item European Association for Signal Processing (EURASIP) Journal on Audio, Speech, and Music Processing
 \item The Journal of the Acoustical Society of America (JASA)
 \item Frontiers in Computer Science
 \item revue Traitement Automatique des Langues (TAL - ATALA)
 \end{enumerate}
 \subsection{\EvalConf}
-\begin{enumerate}
+\begin{enumerate}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
 \item Annual Conference of the International Speech Communication Association (INTERSPEECH - ISCA)
 \item International Conference on Acoustics, Speech, and Signal Processing (IEEE ICASSP)
 \item International Conference on Language Resources and Evaluation (LREC)
@@ -333,21 +395,21 @@ Plus d'informations à venir!
 \subsection{\EvalProj}
 
 \begin{en}
-\begin{enumerate}
+\begin{enumerate}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
 \item Member of International Federation of Television Archives (IFTA) Media Studies Grant Commission (2020-2021)
 \item Member of French National Research Agency (ANR) CE38 evaluation committee (2018)
 \end{enumerate}
 \end{en}
 
 \begin{fr}
-\begin{enumerate}
+\begin{enumerate}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
 \item Membre de la commission d'attribution des bourses pour les études des médias de la Fédération Internationale des Archives de Télévision (FIAT/IFTA) (2020-2021)
 \item Membre du comité d'évaluation CE38 (La Révolution numérique : rapports au savoir et à la culture) de l'Agence Nationale de la Recherche (ANR) (2018)
 \end{enumerate}
 \end{fr}
 
 \subsection{\EvalAnim}
-\begin{enumerate}
+\begin{enumerate}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
 \item Music Information Retrieval Evaluation eXchange (MIREX - 2018).
 \begin{en}Task Captain in change of voice and music activity detection challenge in collaboration with\end{en}
 \begin{fr}
