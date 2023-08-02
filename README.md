@@ -1,4 +1,4 @@
-# David Doukhan extended CV
+# David Doukhan CV
 
 ## CV English
 
@@ -18,5 +18,5 @@ https://daviddoukhan.github.io/cv/david_doukhan_extended_cv_fr.pdf
 
 
 ## CREDITS
-The template of the CV is provided in project autoCV : a clean CV LaTex template with GitHub Action that compiles and publishes new changes
+This document is adapted from project autoCV : a clean CV LaTex template with GitHub Action that compiles and publishes new changes
 https://github.com/jitinnair1/autoCV
